@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .app {
     min-height: 100vh;
@@ -6,15 +7,31 @@
 
 .loader {
     justify-content: center;
-    color: purple;
+    color: #f21170;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    color: #f21170;
 }
 
 form {
     margin: 20px 0 50px 0;
 }
 
-input, button {
-    display: inline-block;
+.btn-custom {
+    background: #f21170;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+}
+
+.btn-custom:hover {
+    background: #fff;
+    color: #f21170;
 }
 
 .main-container {
@@ -24,4 +41,24 @@ input, button {
     align-items: center;
     height: 100vh;
     margin: 20px 0;
+}
+
+input[type="text"] {
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid #f21170 !important;
+    height: 46px;
+}
+
+input[type="text"]:focus {
+    box-shadow: none;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+    button {
+        margin-top: 10px;
+        font-size: 24px;
+    }
 }

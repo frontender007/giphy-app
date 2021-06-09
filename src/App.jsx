@@ -4,7 +4,10 @@ import './App.css';
 
 const App = () => {
     return (
-        <Gif />
+        <div className="container">
+            <h1 className="text-center">Giphygram</h1>
+            <Gif />
+        </div>
     );
 }
 

@@ -56,12 +56,14 @@ const Gif = () => {
         }
         return gifs.map(gif => {
             return (
-                <div 
-                key={gif.id} 
+                
+                <div
+                key={gif.id}
                 className="gif col-lg-2 col-md-3 col-sm-4 col-xs-6 d-flex flex-column justify-content-center align-items-center"
                 >
-                    <img src={gif.images.fixed_height.url} alt={gif.title} />
+                    <img className="img-responsive" src={gif.images.fixed_height.url} alt={gif.title} />
                 </div>
+                
             );
         });
     }
@@ -124,7 +126,7 @@ const Gif = () => {
             {renderError()}
             <form onSubmit={handleSearch} className="form-inline justify-content-center m-2">
                 <input value={query} onChange={handleInputChange} type="text" className="form-control" placeholder="Search"/>
-                <button className="btn btn-primary">
+                <button className="btn btn-primary btn-custom">
                     <i className="fas fa-search"></i>
                 </button>
             </form>
