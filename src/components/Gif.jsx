@@ -58,10 +58,10 @@ const Gif = () => {
             return (
                 
                 <div
-                key={gif.id}
-                className="gif col-lg-2 col-md-3 col-sm-4 col-xs-6 d-flex flex-column justify-content-center align-items-center"
-                >
-                    <img className="img-responsive" src={gif.images.fixed_height.url} alt={gif.title} />
+                    key={gif.id}
+                    className="col-lg-2 col-md-3 col-sm-4 justify-content-center text-center gif"
+                    >
+                        <img style={{ marginRight: "0px", width: "200px", height: "200px"}} className="img-responsive bordered" src={gif.images.fixed_height.url} alt={gif.title} />
                 </div>
                 
             );
@@ -77,7 +77,7 @@ const Gif = () => {
         if (isError) {
             return (
                 <div className="alert alert-danger" role="alert">
-                    Problem get gifs, please again in a bit.
+                    Problem getting gifs, please try again in a bit.
                 </div>
             )
         }
@@ -117,22 +117,33 @@ const Gif = () => {
             }
             setIsLoading(false);
         }
-        fetchGifs();
+        if (query === '') {
+            alert("Please enter a value to search gifs");
+        } else {
+            fetchGifs();
+        }
         setQuery("");
     }
 
     return (
-        <div className="text-center">
+        <div className="container-fluid app">
             {renderError()}
-            <form onSubmit={handleSearch} className="form-inline justify-content-center m-2">
-                <input value={query} onChange={handleInputChange} type="text" className="form-control" placeholder="Search"/>
-                <button className="btn btn-primary btn-custom">
-                    <i className="fas fa-search"></i>
-                </button>
-            </form>
-            <div>
+            <div className="row">
+                <header className="text-center">
+                    <h1 className="text-center">Giphygram</h1>
+                    <form onSubmit={handleSearch} className="form-inline justify-content-center m-2">
+                        <input value={query} onChange={handleInputChange} type="text" className="form-control searchBox" placeholder="Search"/>
+                        <button className="btn btn-dark searchBtn">
+                            <i className="fas fa-search"></i>
+                        </button>
+                    </form>
+                </header>
+            </div>
+
+            <div className="row">
                 {renderGifs()}
             </div>
+
         </div>
     )
 }
