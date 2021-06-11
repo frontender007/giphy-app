@@ -80,11 +80,19 @@ h4 {
     margin-left: 10px;
     height: 48px;
     width: 48px;
-    transition: transform 0.3s ease-in;
+    -webkit-transition: transform 0.4s ease-in-out;
+    -moz-transition: transform 0.4s ease-in-out;
+    -ms-transition: transform 0.4s ease-in-out;
+    -o-transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out; 
 }
 
 .searchBtn:hover {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); 
 }
 
 .searchBtn:active, .searchBtn:hover {
