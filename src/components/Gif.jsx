@@ -59,7 +59,7 @@ const Gif = () => {
                 
                 <div
                     key={gif.id}
-                    className="col-lg-2 col-md-3 col-sm-4 justify-content-center text-center gif"
+                    className="col-lg-2 col-md-3 col-sm-4 col-xs-12 justify-content-center text-center gif"
                     >
                         <img style={{ marginRight: "0px", width: "200px", height: "200px"}} className="img-responsive bordered" src={gif.images.fixed_height.url} alt={gif.title} />
                 </div>
@@ -120,7 +120,7 @@ const Gif = () => {
         if (query === '') {
             alert("Please enter a value to search gifs");
         } else {
-            fetchGifs();
+            setTimeout(fetchGifs(), 1500);
         }
         setQuery("");
     }
@@ -133,7 +133,7 @@ const Gif = () => {
                     <h1 className="text-center">Giphygram</h1>
                     <form onSubmit={handleSearch} className="form-inline justify-content-center m-2">
                         <input value={query} onChange={handleInputChange} type="text" className="form-control searchBox" placeholder="Search"/>
-                        <button className="btn btn-dark searchBtn">
+                        <button className="searchBtn">
                             <i className="fas fa-search"></i>
                         </button>
                     </form>

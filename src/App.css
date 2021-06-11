@@ -32,7 +32,7 @@ h1 {
     max-width: 200px !important;
     max-height: 200px !important;
     padding: 0 !important;
-    margin: 15px;
+    margin: 10px 5px 10px 15px;
 }
 
 .gif:hover {
@@ -46,6 +46,7 @@ h1 {
 } */
 
 .searchBox {
+    font-size: 20px;
     outline: none;
     border-radius: 25px;
     border: 1px solid #bf1363 !important;
@@ -59,6 +60,7 @@ h1 {
 
 .searchBtn {
     background: #bf1363;
+    color: #fff;
     border-radius: 50%;
     outline: none;
     border: none;
