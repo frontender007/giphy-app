@@ -8,12 +8,14 @@
 
 header {
     margin-bottom: 50px;
+    padding: 15px 25px;
+    background: #bf1363;
 }
 
 h1 {
     font-family: 'Lobster', cursive;
     font-size: 3.55819125em;
-    color: #bf1363;
+    color: #fff;
     margin-bottom: 25px;
 }
 
@@ -28,6 +30,14 @@ h1 {
     max-width: 100%;
 }
 
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
 .gif {
     max-width: 200px !important;
     max-height: 200px !important;
@@ -40,16 +50,11 @@ h1 {
     transition: transform 0.5s ease-in-out;
 }
 
-
-/* .form-custom {
-    
-} */
-
 .searchBox {
     font-size: 20px;
     outline: none;
     border-radius: 25px;
-    border: 1px solid #bf1363 !important;
+    border: 1px solid #fff !important;
     height: 46px;
     box-shadow: none;
 }
@@ -59,8 +64,8 @@ h1 {
 }
 
 .searchBtn {
-    background: #bf1363;
-    color: #fff;
+    background: #fff;
+    color: #bf1363;
     border-radius: 50%;
     outline: none;
     border: none;
@@ -70,8 +75,7 @@ h1 {
 }
 
 .searchBtn:hover {
-    background: #fff;
-    color: #bf1363;
+    opacity: 0.6;
 }
 
 .searchBtn:active, .searchBtn:hover {
@@ -87,12 +91,19 @@ h1 {
     margin: 20px 0;
 }
 
+footer {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    color: #fff;
+    text-align: center;
+    padding: 40px 10px;
+    font-size: 18px;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 768px) {
     button {
         margin-top: 10px;
-        font-size: 24px;
     }
 
     .gif {

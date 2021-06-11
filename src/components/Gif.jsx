@@ -128,10 +128,10 @@ const Gif = () => {
     return (
         <div className="app container-fluid">
             {renderError()}
-            <div className="row">
+            <div className="row my-5">
                 <header className="text-center">
                     <h1 className="text-center">Giphygram</h1>
-                    <form onSubmit={handleSearch} className="form-inline justify-content-center m-2">
+                    <form onSubmit={handleSearch} className="form-inline justify-content-center  py-3 m-2">
                         <input value={query} onChange={handleInputChange} type="text" className="form-control searchBox" placeholder="Search"/>
                         <button className="searchBtn">
                             <i className="fas fa-search"></i>
@@ -140,7 +140,7 @@ const Gif = () => {
                 </header>
             </div>
 
-            <div className="row">
+            <div className="centered">
                 {renderGifs()}
             </div>
 
