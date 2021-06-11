@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-
 .app {
     background-color: #deeeea;
     min-height: 100vh;
@@ -28,19 +27,6 @@ h4 {
     color: #bf1363;
 }
 
-.gif:after {
-    content: "";
-    width: 50px;
-    height: 5px;
-    background-color:#bf1363;
-    display: block;
-    margin-top: 20px;
-    position: absolute;
-    top: 15%;
-    left: 40%;
-    line-height: 1.5em;
-
-}
 .loader {
     justify-content: center;
     color: #f21170;
@@ -94,10 +80,11 @@ h4 {
     margin-left: 10px;
     height: 48px;
     width: 48px;
+    transition: transform 0.3s ease-in;
 }
 
 .searchBtn:hover {
-    opacity: 0.6;
+    transform: scale(1.1);
 }
 
 .searchBtn:active, .searchBtn:hover {
@@ -136,7 +123,7 @@ footer {
 @media screen and (max-width: 449px) {
     h4 {
         display: block;
-        margin: 25px 0;
+        margin: 12px 0 30px 0;
         text-orientation:sideways-right;
     }
 }
