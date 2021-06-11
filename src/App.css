@@ -19,6 +19,25 @@ h1 {
     margin-bottom: 25px;
 }
 
+h4 {
+    display: none;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h4:after {
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color:#bf1363;
+    display: block;
+    margin-top: 10px;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+
+}
 .loader {
     justify-content: center;
     color: #f21170;
@@ -108,5 +127,13 @@ footer {
 
     .gif {
         margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 449px) {
+    .gif:hover h4 {
+        display: block;
+        margin: 25px 0;
+        text-orientation:sideways-right;
     }
 }

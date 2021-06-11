@@ -61,6 +61,7 @@ const Gif = () => {
                     key={gif.id}
                     className="col-lg-2 col-md-3 col-sm-4 col-xs-6 justify-content-center text-center gif"
                     >
+                        <h4>{gif.title}</h4>
                         <img style={{ marginRight: "0px", width: "200px", height: "200px"}} className="img-responsive bordered" src={gif.images.fixed_height.url} alt={gif.title} />
                 </div>
                 
